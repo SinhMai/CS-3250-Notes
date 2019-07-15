@@ -1,0 +1,610 @@
+6.4.19 
+    installed required PIP packages
+
+
+
+
+---------------------------------------------------------------------------------------------
+5 Dysfunctions of a Team
+    6.4.19 - Read 30 minutes
+        First dysfucntion of a team is the abscence of Trust
+
+---------------------------------------------------------------------------------------------
+Notes 6.5.19
+    - Intro to Software Development
+        -Negatives?
+            Software is everywhere
+            its mostly bad
+        
+        -Positives?
+            profitable
+            better than manual labor
+            FUN
+        
+        - Software and its Development
+            extremely complex
+            Software is always increasing the number of lines of code over many iterations
+            It is important to match the programing language to the problem
+                ex. statistics would use R or mathmatica for math related problems
+            no programing language exists for all problems
+                Java was originally meant for embedded systems
+            
+Notes 6.12.19
+    -Python is good at dictionaries, and method references
+    
+    -Non-Functional requirements 
+        -performance
+        -real-time performance
+        -maintainability
+            -readability
+            -modularity
+    
+
+    -Test Driven Development
+        -Unit testing involves testing induvidual methods
+        -Integrated development involves testing entire classes
+            -This is to see how different methods interact with each other
+
+    -Unit testing
+        - Arguably the most important
+        - Modern Software Engineering methods use "test first"
+            - Write a test
+            - Make sure it fails
+            - Write just enough code to make it work
+        - If you dont know how to test it, how can you write it?
+        - Correct frame of mind
+        - Needs an equal amount of test code as there is actual code
+
+    - Implementation
+        - SE tends to focus on requirements, design, and processes
+        - a bad implementation will ruin everything else
+    
+    - Style
+        - Follow language styles
+            - eg. "The Elements of Java Style" by, Scott Ambler and Trevor Misfeldt
+
+    - Naming
+        - Use good, descriptive names
+
+    - Tests
+        - Tests must be easy to run and run alot
+
+    - Use Libraries
+        - Developed and tested by many others
+        - Don't reimplement
+            - You need to learn what is possible
+            - Yes, yeo may know how and think you are better, but you are not
+            - Write something else no one has written 
+    - Reviews
+        - Code reviews are very effective for improving quality
+        - Knowing someone else is looking affects you
+        - Others know things you dont
+    - Other guidelines
+        - DRY: Dont repeat yourself
+            -refers to repeating code
+    
+    - Agile code development
+        - Many different processes that emphasize short release cycles 
+            that allow changes in design
+        - Focus on human and team aspects
+        
+        - Short releases ans iterations
+            - often released every two weeks
+        - incremental design
+        - user involvement
+        - lightweight documentation
+        - informal communication
+        - change
+            - can happen at anytime
+    
+    - Why Agile?
+        - Lengthy development time
+            - overall development time is not reduced, but there are many releases insead
+        - Difficulty in responding to changing requirements
+            - Now change is expected and part of the process
+        - All requirements not understood at the beginning
+        - Too much reliance on heroic effort
+        - Processes were too complex
+            - RUP: 100 tasks and 30 roles
+            - Too much overhead
+        - Too much waste and duplication
+            - UML (Unified Modeling Language) and code
+            - Code now source of design
+    - Agile Promises
+        - Finished product always availiable
+        - Normal effort by team
+        - Deal with change
+    - What really matters
+        - Human interation is important
+        - Process and technology are second-order
+    - What to do 
+        - How do we mnage the teams that are required to produce software?
+        - Process hasn't created what it promised
+            - Smooth software development
+        - People tend to want to control everything
+            1. add more processes
+            2. When that dosen't work (which it can't), go back to step 1
+        - If process were the answer, you'd think we would have figured out by now
+            - If it were easy, it would be done
+        - Indeed, process can cause more problms than it solves
+            - becomes cumbersome and slows progress
+
+    - Agile software development manifesto
+        -https://agilemanifesto.org/ 
+            - individuals and Interactions over Porcesses and tools
+                - Start as small as possible and only increase when only truely needed
+                - Don't create the environment first
+                - Create the team and let them create the environment first
+            - Working Software over Comprehensive Documentation
+                - Software without Documentation is a disaster
+                - Needs to describe the system and document design decisions
+                - large amounts of documentation can become cumbersome and out of sync
+                - Knowledge is transfered in the team by direct interaction
+                - PRODUCE NO DOCUMENT UNLESS IT'S NEED IS IMMEDIATE AND SIGNIFICANT
+            - Customer Collaboration over contract negotiation
+                - Sucessful projects get customer feedback early and often
+                - Best contracts specify how teams and customer's interact
+            - Responding to change over following a plan
+                - Things change all the time
+                    - And you might as well accept it
+                    - And your customers will be happier with the product
+                - Teams gain knowledge about the problem
+                - Customers gain knowlegde about the solution
+                - Detailed plans for the next two weeks, rough plans for three months, and crude plans after that
+-------------------------------------------------------------------------------------------------------------------
+Design Patterns
+
+- Why?
+    - Creates a chared vocabulary
+        - Developers can interact in richer terms
+    - Keeps thinking and designing at an abstract level
+        - Creates better (more flexible, reusable, etc.) designs
+
+- Origin
+    - design patterns originated as an architectural concept by Christopher Alexander
+    - in 1987, Kent Beck, and Ward Cunningham, began experimenting with the idea of applying 
+        these patterns to programming - specifically pattern languages - 
+- Christopher Alexander
+    - Regarded as the founder of the pattern language movement
+    - The first Wiki - the technology behind Wikipedia- led directly from Alexander's work
+    - Pattern Language: Towns, Buildings, Construction (1977) Described a practical archhitectural 
+        system iin a form that a theoretical mathematician or computer scientist might call a generative grammar
+    - The Timeless Way of Building (1979)
+- Groups and Concepts
+    - Design patterns were originally grouped into categories:
+        - Creational
+        - Strucural
+        - Behavioral
+    - and described using the concepts of: 
+        - delegation
+        - aggregation
+        - consultation
+
+    -AEI and O+1
+        - Abstraction
+        - Encapsulation
+        - Inheritance
+        - O+1 = Polymorphism
+
+- Design Principles
+    
+    - First Design Principle
+        - Identify aspects of your application that vary and seperate the from what stays the same
+        - You can alter or extend without affecting other parts
+        - Basis of almost every design patterns
+   
+    - Second Design Principle
+        - Program to an interface, not an implementation
+            - Not necessesarily a Java interface
+            - Program to a supertype
+                - private Map<String, Boolean> urls = new ConcurrentHashMap<String, Boolean>();
+            - Can then better use Polymorphism
+            - Can more easily change implementation
+    
+    - Third Design Pattern
+        - Favors composition over inheritance
+        - Favors Has-a relationships over is-a relationships
+        - Inheritance limits reusability
+   
+    - Strategy Pattern
+        - Defines a family of algorithms, encapsulates each one , and makes them interchangeable
+        - Strategy lets the algorithm very independently from the clients that use it
+
+    - The Observer Pattern
+        - Defines a one to many dependency between objects so that when one object changes 
+            state, other observers are notified
+        - The observer pattern is a software design pattern in which an object, called the subject,
+            maintains a list of its dependents, calles observers, and notifies them automatically of any
+            state changes, usually by calling one of their methods
+        -It is mainly used to implement distributed event handling systems, in "event driven" software
+    
+    - Design principle
+        - Strive for loosely-coupled designs between objects that interact
+        - Objects have very little information about each other
+        - No shared state
+    
+    - Decoupling
+        - The observer pattern helps decouple objects
+        - The subject knows only that the observer implements the Observer interface
+        - New observers can be added at any time
+        - New types of observers can be added
+        - Can reuse subjects and observers independently
+        - Changes have no affect on each other
+    - Decorator Pattern
+        - Open/ CLose Principle
+            - Designs should be open for extension, but closed for modification
+        - Has the same super type of the objects they decorate
+        - Can have one or more decorators
+        - Can pass wrapped objects anywhere the original could be passed
+        - Adds behavior before and/ or after delegating objects
+        - Objects can be decorated at runtime
+        - Atttaches addtional responsibilities to an object dynamically
+        - Provide a flexible alternative to sub-classing for extending functionality   
+    - Factory Pattern
+        - Factories
+            -Handles the details of object creation
+                - Encapsulates the creation in a subclass
+                - Decouples the interface from creation
+            - Can return a variety of types
+            - Client dosen't care which type 
+            - Can add additional types of easily
+            - If the class is static, the class can't be subtyped
+            - Abstraction
+                - Factories do not have to be abstract
+            -The dependency inversion principle
+                - depends on abstrations 
+                - does not depend upon concrete classes
+    - Singleton 
+        - Need only one of 
+            - Thread pools, caches, dialog boxes, preferences, logging, device drivers, I/O
+            - But: might not need each time, so lazy initialization
+        - Ensures a single class 
+        - Threading
+            - Syncronize getinstance
+        -Visibility and Syncronizaton
+            -
+        -
+    - Command Pattern
+        - def:
+        - Participants
+            - Client is responsible for creating a concrete command and setting its reciever
+            - Invoker holds a command object ans at some point calls its excecute...
+
+    - Adapter Pattern
+        - Converts the interface of a calss into another interface the clients expect
+        - Adapter lets classes work together that couldn't otherwise because of incompaible interfaces 
+        - Two types
+            - Object
+            - Class
+-------------------------------------------------------------------------------------------------------------------
+Notes 7.1.19
+
+    - Design Patterns CH 9
+        -Iterator and composite pattern
+            -Provides a way to access the elements of an aggregate object sequentially 
+                without exposing the underlying representation
+            - This places teh task of traversal on the iterator object, not on the aggregate
+            
+        - Java
+            - Eneumeration is the older that has been replaced by the iterator
+                -Iterator allows removal
+        
+        -Design Principle
+            - A class should have only one reason to change
+                - Single-responsibility principle
+            -High cohesion
+                - All methods related to a single purpose of a class
+        
+        - Composite Pattern 
+            - Allows you to compose objects into tree structures to represent part/whole heirarchies
+            - Composite allows clients to treat individual objects and compositions of objects uniformly
+            - We can apply the same operations over both composites and individual objects
+            - Can ignore differences between the two
+            - Think recursion, Polymorphism
+
+        - Part / Whole
+            - Animals 
+                - Respiration, locomotion
+            - Objects in a scene
+                - Texture
+        
+        - State Pattern
+            - The combination of the value of all the variables in an object
+            - We use state mechanics all the time
+                -NFAs, DFAs
+            - Automata
+                - combinatorial logic
+                - Finite State Machines
+                - Pushdown
+                - Turing Machines
+            - Allows an object to alter its behavior when its internal state changes
+            - The object will appear to change its class
+            - Very similar to strategy pattern
+
+    - Getting a Job
+        
+        -The great american know who
+            - Networking is key
+        
+        - #1's
+            - Maintaining your GPA
+            - Impressing people in your classes is the other #1 thing to do 
+        
+        - Linked in
+            - Join it
+                - Its free
+                - good way to network 
+                - sends you jobs that match your skills
+                - Pulse is usually pretty good
+                - recruiters rely on it heavily
+        
+        - Meetup
+            - Just Join it
+            - Find a meetup that mathces your intrests in a job
+            - food
+            - Would it kill you to interact with people you dont know? 
+                - and talk about things you are intersted in?
+            - DJUG
+                - Denver Java Users Group
+        
+        - Twitter
+            - Maybe join it
+            - Dont retweet or like
+            - follow those who you are interested in
+        
+        - Stop
+            - doing anything that won't get you a job
+            - Wasting time?
+                - Time is all that we have
+            - Everybody is an expert at something
+                - Choose what yu want to be an expert at
+        
+        - Start
+            - Learning about your field
+                -ACM IEEE
+            - Being relateable
+                - Being able to interact with the non-geek
+            - Being Nice
+            - Branching out
+                - New Languages (Human, programming) etc.
+        
+        -Why is anyone hired
+            - Because someone is willing to pay to have a solution to their problem
+            - Be the solution
+
+        - Do the job berfore you get the job 
+            - Do research on the company an the position
+            - What tech do they use
+            - Whom have they bought and been bought by
+            - Their strengths and weaknesses and those of their competitors
+        
+        - Market yourself
+            - Include 
+                - A non-School email address
+                - your twitter, Linked in, github urls
+            - Github
+                - your school work
+                - Gists
+            - Blog 
+            - Create and give a presenation or two
+            - Write a paper or two
+        
+        - Resume
+            - Your resume wll first be filtered by an HR program to be buzzword requirement
+            - You have 5 seconds to catch someone's attention
+                - Important stuff first
+            
+            - Don't
+                - Put your address
+                    - You're willing to commute or WFH
+                - Use your school address
+                - HAve a cure email address or funny/gamer github Login
+                - List required courses
+                    - But do list electives
+                - LisT IDE's
+                - Mention desktop applications
+                - Put in Objectives
+                    - Your objective is to get a job
+                    - Objectives and targeted info can go in a cover letter
+            
+            - Do 
+                - Put in your Github and linkedin URL's
+                - List your languages, either in order (or with level of expierence)
+                - List scrum, git, design patterns, TDD, Travis CI/CD, Sonar Cloud
+                - Mention linux
+                - Say what your role was and what you acutally accomplished 
+                    - Not what you were responsible for
+                - Keep it short (one page for entry level jobs)
+                - Do be carefull with spelling, grammar, and formatting
+                    - Don't change fonts, justification, etc.
+            
+        - Interviewing: Many Kinds
+            - Typically start with phone screen or online test
+            - Possibly followed by an online quiz
+            - May be half- or full-day
+            - May be interviewed by a group
+                - Or individuals
+                - Or mix of people from different positions
+            - Typically have to eat with them
+                - Table manners are important
+        - Overall
+            - Arrive 15 minutes early, but enter 8-10 minutes early
+            - bring a notepad and make notes if necessesary 
+            - Bring extra Resumes
+            - Follow up!
+                - The day
+                - Say thanks, you know how much work it is, if there is anything else you can provide to help
+        - Personal
+            - Dress well
+            - Eye contact
+            - Body Language
+                - Don't cross your arms or legs
+                - Lean in
+                - Avoid nervous habits
+            - Don't wear AXE
+                - Many people are sensitive/ allergic to artificial scents
+        - What you want
+            - You are interviewing them as much as you
+                - You dont want to work for just any place
+                - Unless you want to grit your teeh for a year and build your resume
+                - Maybe check out https://Glassdoor.com/ 
+            - Working at someplaces is worse than not working in the field for a time
+                - Trailing edge technology that traps you
+                - A place you can't excel in
+                - Churn and burn
+        - What to ask
+            - Why do you work here
+            - What are the working conditions
+            - What SE lifecycle is used
+                - Waterfall
+                - Agile
+                - Is TDD used?
+            - What is the tool chain
+            - HR
+                - How are the benifits
+                    - Health, vacation, retirement
+        - Types of questions
+            - Computer Science
+                - ALgorithms and data structures
+                - O of algorithms and choosing
+                - Imperative vs functional
+            - What you have done
+                - Make sure you did what is on your resume and are ready to talk about it
+                - they are looking for specifics
+                - give a concrete example
+                - if you dont have an example, say so
+            - Language
+                - When would you use an anonymous inner class in java
+                - What's a lambda
+                    - Know your versions
+                - What's a closure
+            - OO
+                - What are the major features of OO
+                    - Abstraction, Inheritance, Encapsulation, 
+                - What is an interface
+                - What is a virtual method
+                - What is multiple inheritance
+                - Deep vs shallow copies
+                - Dependency inversion/ inversion of control
+                    -Frameworks
+                - Design Patterns
+            - Do me a SOLID
+                - S Single responsibility principle
+                    - Classes do one thing
+                - O Open Closed Principle
+                    - Open for extension, closed 
+                - L Liskov substitution principle
+                - I Interface segregation principle
+                - D Dependency Inversion Principle
+            - OS 
+                - Concurrency
+            - Networks
+                - IPv4 vs IPv6
+                - TCP vs UDP
+                - Client/server
+            - SE
+                - Git, Github
+                - Agile Manifesto
+                - TDD
+                - DRY YAGNI
+                - CI/CD
+            - WEB 
+                - MVC
+                - ORM 
+                - Ajax
+        - Questions
+            - What are your strengths and weaknesses?
+        - Tough Questions
+            - They typically will ask a few very difficult questions
+                - to show off
+                - to see how you reason
+            - How many trees are in the continental US?
+            - How far away is the moon?
+        - Verbal Hints
+            - Don't say "I feel like"
+                - use "I think" or "I believe"
+            - Avoid "Like"
+                - unless you'are making a simile
+                - Also "um", "you know", and "got"
+            - Don't use the word "literally"
+            - Irregardless is not a word
+                - regardless is
+                - irrespective is
+            - Don't say methodology
+            - The word data is plural
+                - Datum is the singular
+            - Don't make jokes
+            - Be terse and dont BS 
+        - Guerrilla interviewing
+            - Looking for smart people who get things done
+            - Introduction
+            - Question about recent project candidate worked on
+            - Easy programming question
+            - Pointer/recursion question
+            - Do you have any questions?
+            - Please tell me about yourself
+-------------------------------------------------------------------------------------------------------------------
+Notes 7.10.19
+
+    - Effective Java ch2
+        - Consider Static Factory methods instead of Costructors
+            - One Advantage is that they have names
+                - Constructors do not and one has to differentiate via parameters
+                - This can be confusing and lead to errors
+            - A class can only have one constructor with a given name
+                - Don't change the order of constructor parameters to differentiate
+            - Static factory methods don't have to create a new object
+                - Constructors always do
+                - Maybe there is an object already created that works
+                - Helps with immutable classes and pre-construced instances
+            - Singletons, flyweights, non-instantiable
+            - Can return a subtype
+                - java.util.collections contains all static methods that work on many types
+                - Polymorphic
+                - addAll, binarySearch, disjoint, frequency, min, max, sort, shuffle, reverse, etc.
+                - The type that is returned can be non-public
+                - can vary implementation
+            - Returned class need not exist at the time the class is written
+                - Allows run-time specification
+                - JDBC is an example
+            - Service Provider Framework
+                - Service interface
+                - Provider registration
+                - Service Access
+                - Optional service provider interface
+                    - Factory to create service provider
+            - Java 6
+                - General purpose java.util.ServiceLoader
+                    - So you dont have to write your own
+            - Disadvantages
+                - Classes without public or protected constructors cannot be sub-classed 
+                - Not called out in Javadoc
+            - Popular Java static factory names
+                - valueOf, getInstance, newInstance, get(Type), ...
+        - Consider a builder when faced with many constructor parameters
+            - If a class has many fields that need initializing, constructors ???
+            - Don't create empty instance and have many set()s
+                - Problem: instance in inconsistent state
+            - Builder Pattern
+            - build() is a parameter-less static method
+            - Required parameters passed in to constructor
+                - Optionals set()
+                - Other languages have optional parameters instead
+            - 
+        - 
+-------------------------------------------------------------------------------------------------------------------   
+-Game Notes
+    - CLI = command line interface
+        - accessed by the user who inputs commands
+    - Engine
+        - Runs the game
+        - saves a save state to a .yml file (State.yml)
+        - The Engine can load the save file for the user to continue from.
+
+    - REPL = Read -> Eval -> Print -> Loop
+        - Basic game loop
+        - IT IS AN INFINITE LOOP
+        - Thus it requires an exit condition
+
+-Testing notes
+    -Tests define what the purpose of what is being tested
